@@ -24,6 +24,7 @@ function findMany(){
 }
 
 async function findOne(id:number){
+
 	if(!id || isNaN(id)){
 		throw errorHandler({
 			message:'Id para busca do jogo é invalido!',

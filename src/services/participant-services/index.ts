@@ -1,3 +1,4 @@
+import { errorHandler } from '../../errors';
 import { ParticipantInput } from '../../protocols';
 import { participantRepository } from '../../repositories';
 
@@ -9,8 +10,17 @@ function findMany(){
 	return participantRepository.findMany();
 }
 
-function findOne(id:number){
-	return participantRepository.findOne(id);
+async function findOne(id:number){
+	const participant = await participantRepository.findOne(id);
+
+	if(!participant){
+		throw errorHandler({
+			message: 'Este participante não está registrado!',
+			name:'BadRequestError'
+		});
+	}
+
+	return participant;
 }
 
 export const participantServices = {

@@ -8,7 +8,7 @@ export type ApplicationError = {
 
 export type GenericError = {
   message: string;
-  name: 'BadRequestError' | 'NotFoundError' | 'NotFoundError';
+  name: 'BadRequestError' | 'NotFoundError';
 }
 
 export type ParticipantInput = {
