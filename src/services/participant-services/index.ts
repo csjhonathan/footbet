@@ -1,5 +1,5 @@
-import { ParticipantInput } from '@/protocols';
-import { participantRepository } from '@/repositories';
+import { ParticipantInput } from '../../protocols';
+import { participantRepository } from '../../repositories';
 
 function create(body:ParticipantInput){
 	return participantRepository.create(body);

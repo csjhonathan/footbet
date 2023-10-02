@@ -1,8 +1,8 @@
-import { BetInput } from '@/protocols';
-import { betRepository } from '@/repositories';
 import { participantServices } from '../participant-services';
 import { gameServices } from '../game-services';
 import { errorHandler } from '../../errors';
+import { BetInput } from '../../protocols';
+import { betRepository } from '../../repositories';
 
 async function create(body:BetInput){
 	const {participantId, gameId} = body;

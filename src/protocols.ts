@@ -11,7 +11,6 @@ export type GenericError = {
   name: 'BadRequestError' | 'NotFoundError' | 'NotFoundError';
 }
 
-
 export type ParticipantInput = {
 	name: string;
 	balance: number;
@@ -25,6 +24,11 @@ export type GameInput = {
 export type GameUpdate = {
 	homeTeamScore: number;
 	awayTeamScore: number;
+}
+
+export type BetResult = {
+  status : 'WON' | 'LOST';
+  amountWon: number;
 }
 
 export type BetInput = Omit<Bet, 'id' | 'createdAt' | 'updatedAt' | 'status' | 'amountWon'>

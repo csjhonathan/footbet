@@ -1,7 +1,7 @@
 import 'express-async-errors';
 import express, { Express } from 'express';
 import cors from 'cors';
-import { loadEnv, connectDb, disconnectDB } from '@/config';
+import { loadEnv, connectDb, disconnectDB } from './config';
 import { betRouter, gameRouter, healthRouter, participantRouter } from './routers';
 import { handleApplicationErrors } from './middlewares';
 

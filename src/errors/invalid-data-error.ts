@@ -1,5 +1,5 @@
-import { ApplicationError } from '@/protocols';
 import httpStatus from 'http-status';
+import { ApplicationError } from '../protocols';
 
 export function invalidDataError(details: string[]): ApplicationInvalidateDataError {
 	return {

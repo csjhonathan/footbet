@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { NextFunction, Request, Response } from 'express';
 import httpStatus from 'http-status';
-import { ApplicationError, GenericError } from '@/protocols';
 import { Errors } from '../constants';
+import { ApplicationError, GenericError } from '../protocols';
 
 export function handleApplicationErrors(
 	err: ApplicationError | Error | GenericError,

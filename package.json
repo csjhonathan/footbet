@@ -43,7 +43,8 @@
     "ts-node": "^10.9.1",
     "tsc-alias": "^1.8.8",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "typescript-transform-paths": "^2.2.3"
   },
   "dependencies": {
     "@prisma/client": "^5.3.1",

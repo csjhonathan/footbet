@@ -1,5 +1,6 @@
-import { BetInput } from '@/protocols';
-import { prisma } from '@/config';
+import { PrismaClient } from '@prisma/client';
+import { BetInput, BetResult } from '../../protocols';
+import { prisma } from '../../config';
 
 function create(data:BetInput){
 	return prisma.$transaction([
@@ -17,6 +18,14 @@ function create(data:BetInput){
 	]);
 }
 
+function update(id:number, result:BetResult, prispaTransaction:PrismaClient){
+	return prispaTransaction.bet.update({
+		where: { id },
+		data: {...result}
+	});
+}
+
 export const betRepository = {
 	create,
+	update
 };

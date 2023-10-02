@@ -1,6 +1,6 @@
-import { GameInput, GameUpdate } from '@/protocols';
 import { gameRepository } from '../../repositories';
 import { errorHandler } from '../../errors';
+import { GameInput, GameUpdate } from '../../protocols';
 
 function create(body:GameInput){
 	return gameRepository.create(body);
