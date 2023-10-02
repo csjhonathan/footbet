@@ -26,7 +26,7 @@ run postgres container
   -e POSTGRES_PASSWORD=postgres \
   -e POSTGRES_DB=mydb \
   -p 5432:5432 \
-  -v pg-data:/var/lib/postgresql/data \
+  -v volume-name:/var/lib/postgresql/data \
   postgres
 
 ```
@@ -51,6 +51,6 @@ run image
 docker run \
 --name container-name \
 --network network-name \
--e DATABASE_URL=postgres://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{postgres-container-name}:{POSTGRES_CONTAINER_PORT}/{POSTGRES_DB} \
+-e DATABASE_URL=postgres://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_CONTAINER_NAME}:{POSTGRES_CONTAINER_PORT}/{POSTGRES_DB} \
 -p 4000:4000 csjhonathan/footbet
 ```
