@@ -16,9 +16,9 @@
     "test:migration:generate": "npm run test:load-envs prisma migrate dev",
     "test:watch": "jest --watch --passWithNoTests --runInBand",
     "test:load-envs": "dotenv -e .env.test",
+    "dev:load-envs": "dotenv -e .env.dev",
     "test:seed": "npm run test:load-envs prisma db seed",
     "test:coverage": "cross-env NODE_ENV=test jest --passWithNoTests --runInBand --coverage --collectCoverageFrom='./src/**'",
-    "dev:load-envs": "dotenv -e .env.dev",
     "dev:migration:run": "npm run dev:load-envs prisma migrate deploy",
     "dev:migration:generate": "npm run dev:load-envs prisma migrate dev",
     "dev:seed": "npm run dev:load-envs prisma db seed",
@@ -47,7 +47,9 @@
     "typescript-transform-paths": "^2.2.3"
   },
   "dependencies": {
+    "@faker-js/faker": "^8.1.0",
     "@prisma/client": "^5.3.1",
+    "@types/supertest": "^2.0.14",
     "cors": "^2.8.5",
     "cross-env": "^7.0.3",
     "dotenv": "^16.3.1",
