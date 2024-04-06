@@ -11,7 +11,7 @@ image run by local build
 run on project root
 
 ```bash
-  docker built -t image-name .
+  docker build -t image-name .
 ```
 create a network
 create a volume
